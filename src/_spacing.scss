@@ -1,0 +1,6 @@
+@import "variables";
+@each $key, $spacing in map-get($theme, spacing) {
+    .p-#{$key} {
+        padding: $spacing;
+    }
+}

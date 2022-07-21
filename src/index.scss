@@ -1,0 +1,55 @@
+@import "text";
+@import "spacing";
+body.dark-mode {
+    [class^="dark:"][class$="text-primary"] {
+        @extend .text-primary;
+    }
+    [class^="dark:"][class$="text-secondary"] {
+        @extend .text-secondary;
+    }
+    [class^="dark:"][class$="text-success"] {
+        @extend .text-success;
+    }
+    [class^="dark:"][class$="text-danger"] {
+        @extend .text-danger;
+    }
+    [class^="dark:"][class$="text-warning"] {
+        @extend .text-warning;
+    }
+    [class^="dark:"][class$="text-info"] {
+        @extend .text-info;
+    }
+    [class^="dark:"][class$="text-light"] {
+        @extend .text-light;
+    }
+    [class^="dark:"][class$="text-dark"] {
+        @extend .text-dark;
+    }
+    [class^="dark:"][class$="text-muted"] {
+        @extend .text-muted;
+    }
+    [class^="dark:"][class$="text-white"] {
+        @extend .text-white;
+    }
+    [class^="dark:"][class$="text-black"] {
+        @extend .text-black;
+    }
+}
+
+body.light-mode {
+    @include text-primary-mixin;
+    @include text-secondary-mixin;
+    @include text-success-mixin;
+    @include text-danger-mixin;
+    @include text-warning-mixin;
+    @include text-info-mixin;
+    @include text-light-mixin;
+    @include text-dark-mixin;
+    @include text-muted-mixin;
+    @include text-white-mixin;
+    @include text-black-mixin;
+    @include text-align-mixin;
+    @include text-transform-mixin;
+    @include text-style-mixin;
+    @include text-decoration-mixin;
+}
