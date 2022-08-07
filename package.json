@@ -5,9 +5,9 @@
     "main": "index.scss",
     "scripts": {
         "build": "rimraf css && npm run build-sass && npm run build-autoprefix && npm run build-cleancss",
-        "build-sass": "node-sass --output-style expanded src/index.scss ./css/index.css",
-        "build-autoprefix": "postcss --use autoprefixer --map --output ./css/index.css ./css/index.css",
-        "build-cleancss": "cleancss -o ./css/index.min.css ./css/index.css"
+        "build-sass": "node-sass --output-style expanded src/index.scss ./css/all.css && node-sass ./src/untilities -o ./css/minify",
+        "build-autoprefix": "postcss ./css/**/*.css  --use autoprefixer --replace",
+        "build-cleancss": "cleancss --batch --batch-suffix .min css/**/*.css"
     },
     "keywords": [
         "scss",

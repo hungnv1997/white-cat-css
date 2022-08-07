@@ -1,0 +1,23 @@
+@import "../variables";
+@each $key, $spacing in map-get($theme, spacing) {
+    .p-#{$key} {
+        padding: $spacing;
+    }
+    .pb-#{$key} {
+        padding-bottom: $spacing;
+    }
+    .pt-#{$key} {
+        padding-top: $spacing;
+    }
+    .pl-#{$key} {
+        padding-left: $spacing;
+    }
+    .pr-#{$key} {
+        padding-right: $spacing;
+    }
+}
+@each $key, $color in $custom-color {
+    .text-custom-#{$key} {
+        color: $color;
+    }
+}

@@ -1,4 +1,4 @@
-@import "variables";
+@import "../variables";
 //text-primary
 .text-primary {
     color: $primary;
@@ -162,11 +162,11 @@
     }
 }
 /*TEXT DECORATION*/
+.text-decoration-underline {
+    @extend .text-underline;
+}
 .text-underline {
     text-decoration: underline;
-}
-.text-decoration-underline {
-    @extend .text-decoration-underline;
 }
 .text-decoration-line-throught {
     text-decoration: line-through;
@@ -187,4 +187,10 @@
     .text-decoration-none {
         @extend .text-decoration-none;
     }
+}
+.example {
+    display: grid;
+    transition: all 0.5s;
+    user-select: none;
+    background: linear-gradient(to bottom, white, black);
 }
